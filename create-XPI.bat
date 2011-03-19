@@ -1,0 +1,1 @@
+call "%PROGRAMFILES%\7-Zip\7z.exe" u dictionary_lookup_extension-2.0.xpi chrome chrome.manifest install.rdf

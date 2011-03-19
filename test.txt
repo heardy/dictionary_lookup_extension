@@ -1,0 +1,15 @@
+var aa = "1. to solve or conclude (a question, controversy, or struggle) by giving victory to one side: The judge decided the case in favor of the plaintiff. MUSTAFA_SKIP 2. to determine or settle (something in dispute or doubt): to decide an argument. MUSTAFA_SKIP 3. to bring (a person) to a decision; persuade or convince: The new evidence decided him. MUSTAFA_SKIP 4. to settle something in dispute or doubt: The judge decided in favor of the plaintiff. MUSTAFA_SKIP 5. to make a judgment or determine a preference; come to a conclusion.",
+	bb = "1. attractive, especially in a dainty way; pleasingly pretty: a cute child; a cute little apartment. MUSTAFA_SKIP 2. affectedly or mincingly pretty or clever; precious: The child has acquired some intolerably cute mannerisms. MUSTAFA_SKIP 3. mentally keen; clever; shrewd. MUSTAFA_SKIP 4. Informal. in a cute, charming, or amusing way; cutely: In this type of movie the boy and girl always meet cute. MUSTAFA_SKIP 5. the cutes, Informal. self-consciously cute mannerisms or appeal; affected coyness: The young actress has a bad case of the cutes.",
+	a=aa.replace(/ MUSTAFA_SKIP /g, " "),
+	charsPerLine = 50,
+	finished = false,
+	i = 0;
+while (!finished){
+    var line = a.substring(charsPerLine*i,charsPerLine*(i+1));
+    console.log(line);
+    if ( (i+1)*charsPerLine >= a.length){
+        finished = true;
+    }else{
+        i++;
+    }
+}
