@@ -256,6 +256,26 @@ var DLE = {
 				return;
 			}
 			
+			htmlIndex=str.indexOf('<section class="def-pbk">');
+			if (htmlIndex > -1)
+			{
+				var DOMPars = this.HTMLParser(str);
+				var htmlContainer=DOMPars.getElementsByClassName('def-pbk')[0];
+				var html = htmlContainer.getElementsByClassName('def-content');
+				var numItems = html.length <= 5 ? html.length : 5;
+				var definition = "";
+				for (var i=0; i < numItems; i++) {
+					var thisDefinition = this.trim(html[i].textContent);
+					thisDefinition = thisDefinition.replace(/^(\d\.)/g, "$1 ");
+					if ( i < (numItems-1) ) thisDefinition+=" MUSTAFA_SKIP ";
+					definition += thisDefinition;
+				}
+				
+				this.loadTextIntoSubMenu(definition);
+				
+				return;
+			}
+			
 			var iFirst = str.indexOf('><td valign="top">');
 			if(iFirst == -1)
 			{

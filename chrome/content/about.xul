@@ -11,7 +11,7 @@
 <groupbox align="center" orient="horizontal">
 <vbox>
   <text value="Dictionary Lookup Extension" style="font-weight: bold; font-size: x-large;"/>
-  <text value="Version: 2.0"/>
+  <text value="Version: 2.1"/>
   <separator class="thin"/>
   <text value="Created By:" style="font-weight: bold;"/>
   <text value="Mustafa Shabib (mustafashabib [at] sbcglobal [dot] net)"/>
